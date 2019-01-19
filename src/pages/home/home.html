@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <ion-list>
+  <!-- <ion-list>
   	<ion-item-sliding #slidingItem *ngFor="let but of buts; let i = index;" >
 	  	<ion-item>
 	  	  <ion-avatar item-start>
@@ -22,6 +22,18 @@
 	      </ion-avatar>
 	      <h2>{{but.name}}</h2>
 	  	</ion-item>
+    </ion-item-sliding>
+  </ion-list> -->
+  <ion-list>
+
+    <ion-item-sliding #slidingItem *ngFor="let but of buts; let i = index;">
+    <ion-item (click)="showCategory(i)" #item class="item chat-item">
+      <ion-avatar item-start>
+        <img src="assets/imgs/company3.png">
+      </ion-avatar>
+      <ion-icon item-end color="primary" name="arrow-dropright"></ion-icon> 
+      <h2>{{but}}</h2>
+    </ion-item>
     </ion-item-sliding>
   </ion-list>
 

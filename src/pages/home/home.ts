@@ -7,15 +7,20 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-	buts = {
-		name: 'Railways'
-	}
+	buts = [
+		"Railways",
+		"Bank",
+		"Airport",
+		"Others"
+	];
 
 
 	constructor(public navCtrl: NavController) {
 
 	}
 
-
+	showCategory(but) {
+		console.log("Hello Aakar and Vikas");
+	}
 
 }

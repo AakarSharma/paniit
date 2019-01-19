@@ -33,7 +33,11 @@ export class ListPage {
   openLocation(location) {
   	console.log("Location selected");
     this.showList = true;
-    
+
+  }
+
+  showOption(option){
+
   }
 
 }

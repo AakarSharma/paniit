@@ -23,7 +23,7 @@
 		  </ion-select>
 		</ion-item>
 		<ion-item text-center>
-			<button ion-button round (click)="openLocation(i)" color="primary" small class="chilli">Submit</button>
+			<button ion-button round (click)="openLocation(location)" color="primary" small class="chilli">Submit</button>
 		</ion-item>
 	</ion-list>
 
@@ -32,7 +32,7 @@
 		  <h1>Options</h1>
 		</ion-list-header>
 		<ion-item-sliding #slidingItem *ngFor="let option of options; let i = index;">
-		<ion-item (click)="showOption(i)" #item class="item chat-item">
+		<ion-item (click)="showOption(option)" #item class="item chat-item">
 		  <ion-avatar item-start>
 		    <img src="assets/imgs/company3.png">
 		  </ion-avatar>

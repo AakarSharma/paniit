@@ -27,7 +27,7 @@
   <ion-list>
 
     <ion-item-sliding #slidingItem *ngFor="let but of buts; let i = index;">
-    <ion-item (click)="showCategory(i)" #item class="item chat-item">
+    <ion-item (click)="showCategory(but)" #item class="item chat-item">
       <ion-avatar item-start>
         <img src="assets/imgs/company3.png">
       </ion-avatar>

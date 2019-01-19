@@ -1,3 +1,45 @@
 page-list {
+	.page-background{
+    // background-color: rgb(89, 138, 223);
+    background: linear-gradient(0deg, #96e6a1 0%, transparent 100%),  #d4fc79 ;
+
+  }
+
+  .pageh-background{
+    // background-color: rgb(89, 138, 223);
+    background:white;
+    color: #1581a8;
+    font-weight: bolder;
+    font-size: 20px;
+
+  }
+
+  .pagel-background{
+    // background-color: rgb(89, 138, 223);
+    background-color: white;
+    color: #277aad;
+    font-family: American Typewriter, serif;
+    font-style: cursive;
+  }
+
+  .pagel-background:hover{
+    // background-color: rgb(89, 138, 223);
+    background: skyblue;
+    color: black;
+
+  }
+  .item:hover {
+		// background-color: orange;
+		color: red;
+	}
+
+	.chilli:hover{
+		background-color: white;
+		color: red;
+	}
+
+	.chilli{
+		text-align: center;
+	}
 
 }

@@ -15,11 +15,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListPage {
 
+  showList = false;
+
+	locations = [
+		"Delhi",
+		"Mumbai",
+		"Kolkata"
+	];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListPage');
+  }
+
+  openLocation(location) {
+  	console.log("Location selected");
+    this.showList = true;
+    
   }
 
 }

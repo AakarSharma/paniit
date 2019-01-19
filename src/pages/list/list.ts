@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
-/**
- * Generated class for the ListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -21,9 +17,20 @@ export class ListPage {
 		"Delhi",
 		"Mumbai",
 		"Kolkata"
-	];
+  ];
+  
+  options = [
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private firedata: AngularFireDatabase) {
+    const database = this.firedata.database;
+		this.locations = [];
+		database.ref('/').child( this.navParams.get("name")).once('value', snapshot => {
+			snapshot.forEach(child => {
+				this.locations.push(child.key)
+			})
+		});
   }
 
   ionViewDidLoad() {
@@ -33,11 +40,18 @@ export class ListPage {
   openLocation(location) {
   	console.log("Location selected");
     this.showList = true;
+    const database = this.firedata.database;
+		this.options = [];
+		database.ref('/').child( this.navParams.get("name")).child(location).once('value', snapshot => {
+			snapshot.forEach(child => {
+				this.options.push(child.key)
+			})
+		});
 
   }
 
   showOption(option){
-
+		this.navCtrl.push(Statistics,{'name':option.name});    
   }
 
 }

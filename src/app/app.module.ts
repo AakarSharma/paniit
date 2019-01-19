@@ -13,6 +13,7 @@ import { ChartsModule } from 'ng2-charts';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
 import { StatisticsPage} from '../pages/statistics/statistics';
 
 
@@ -32,7 +33,8 @@ var firebaseAuth = {
     MyApp,
     HomePage,
     ListPage,
-    StatisticsPage
+    StatisticsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ var firebaseAuth = {
     MyApp,
     HomePage,
     ListPage,
-    StatisticsPage
+    StatisticsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

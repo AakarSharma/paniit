@@ -7,9 +7,9 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-	buts = [
-
-	];
+	buts = {
+		name: 'Railways'
+	}
 
 
 	constructor(public navCtrl: NavController) {

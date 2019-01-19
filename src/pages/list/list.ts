@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 
-
+import { StatisticsPage} from '../statistics/statistics';
 
 @IonicPage()
 @Component({
@@ -44,14 +44,14 @@ export class ListPage {
 		this.options = [];
 		database.ref('/').child( this.navParams.get("name")).child(location).once('value', snapshot => {
 			snapshot.forEach(child => {
-				this.options.push(child.key)
+				this.options.push({"name":child.key})
 			})
 		});
 
   }
 
   showOption(option){
-		this.navCtrl.push(Statistics,{'name':option.name});    
+		this.navCtrl.push(StatisticsPage,{'name':option.name});    
   }
 
 }

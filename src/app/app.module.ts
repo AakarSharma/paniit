@@ -12,6 +12,8 @@ import { AngularFireStorageModule } from 'angularfire2/storage'; // importing st
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { StatisticsPage} from '../pages/statistics/statistics';
+
 
 
 // firebase key
@@ -28,7 +30,8 @@ var firebaseAuth = {
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    StatisticsPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ var firebaseAuth = {
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    StatisticsPage
   ],
   providers: [
     StatusBar,

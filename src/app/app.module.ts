@@ -8,6 +8,7 @@ import { AngularFireModule } from 'angularfire2'; // using angular2 for firebase
 import { AngularFireAuthModule } from 'angularfire2/auth';  // importing auth module of angularfire2
 import { AngularFireDatabaseModule } from 'angularfire2/database'; // importing database module of angularfire2
 import { AngularFireStorageModule } from 'angularfire2/storage'; // importing storage module of angularfire2
+import { ChartsModule } from 'ng2-charts';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -39,7 +40,8 @@ var firebaseAuth = {
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

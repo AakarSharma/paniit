@@ -6,13 +6,91 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>statistics</ion-title>
+  <ion-navbar text-center color="danger">
+    <ion-title>Statistics</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+	<ion-list no-lines class="descp">
+		<ion-item>
+            <div><label class="fgh">Current Service Time :</label><input type="text" value="{{this.servTime}}" [disabled]="isDisabled"  class="def" id="serv"></div>
+        </ion-item>
+        
+        <ion-item >
+            <div><label class="fgh">Current Waiting Time :</label><input type="text" value="{{this.waitTime}}" [disabled]="isDisabled"  class="def" id="wait"></div>
+        </ion-item>
+	</ion-list>
+
+	<div class="row">
+		<div class="col-md-6">
+		  <div style="display: block;">
+		  	<canvas baseChart text-center width="300" height="400"
+		              [datasets]="lineChartData"
+		              [labels]="lineChartLabels"
+		              [options]="lineChartOptions"
+		              [colors]="lineChartColors"
+		              [legend]="lineChartLegend"
+		              [chartType]="lineChartType"
+		              (chartHover)="chartHovered($event)"
+		              (chartClick)="chartClicked($event)">
+		    </canvas>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+		  <div style="display: block;">
+		  	<canvas baseChart text-center width="300" height="400"
+		              [datasets]="lineChartData1"
+		              [labels]="lineChartLabels1"
+		              [options]="lineChartOptions"
+		              [colors]="lineChartColors"
+		              [legend]="lineChartLegend"
+		              [chartType]="lineChartType"
+		              (chartHover)="chartHovered($event)"
+		              (chartClick)="chartClicked($event)">
+		    </canvas>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+		  <div style="display: block;">
+		  	<canvas baseChart text-center width="300" height="400"
+		              [datasets]="lineChartData2"
+		              [labels]="lineChartLabels2"
+		              [options]="lineChartOptions"
+		              [colors]="lineChartColors"
+		              [legend]="lineChartLegend"
+		              [chartType]="lineChartType"
+		              (chartHover)="chartHovered($event)"
+		              (chartClick)="chartClicked($event)">
+		    </canvas>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+		  <div style="display: block;">
+		  	<canvas baseChart text-center width="300" height="400"
+		              [datasets]="lineChartData3"
+		              [labels]="lineChartLabels3"
+		              [options]="lineChartOptions"
+		              [colors]="lineChartColors"
+		              [legend]="lineChartLegend"
+		              [chartType]="lineChartType"
+		              (chartHover)="chartHovered($event)"
+		              (chartClick)="chartClicked($event)">
+		    </canvas>
+		  </div>
+		</div>
+	</div>
 
 </ion-content>

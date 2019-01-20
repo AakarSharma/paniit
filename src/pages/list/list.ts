@@ -11,8 +11,10 @@ import { StatisticsPage } from '../statistics/statistics';
 })
 export class ListPage {
 
+// Boolean to select whether to show the list or not
   showList = false;
-
+// Locations feeded by hand for now
+// Contains different options for a category
   locations = [
     "Delhi",
     "Mumbai",
@@ -39,6 +41,7 @@ export class ListPage {
     console.log('ionViewDidLoad ListPage');
   }
 
+// Open the choosen location
   openLocation(location) {
     console.log("Location selected");
     this.showList = true;
@@ -53,6 +56,9 @@ export class ListPage {
 
   }
 
+
+// open the statistics page
+ 
   showOption(option) {
 
     this.navCtrl.push(StatisticsPage, {
@@ -60,6 +66,7 @@ export class ListPage {
       "location": this.selectedLocation,
       'name': option.name
     });
+
   }
 
 }

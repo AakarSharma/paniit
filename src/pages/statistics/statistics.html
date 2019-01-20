@@ -20,20 +20,6 @@
 
 <ion-content padding>
 
-	<!-- <ion-list no-lines class="descp">
-		<ion-item>
-            <div><label class="fgh">Name :</label><input type="text" value="{{this.name}}" [disabled]="isDisabled"  class="def" id="serv"></div>
-        </ion-item>
-
-		<ion-item>
-            <div><label class="fgh">Current Service Time :</label><input type="text" value="{{this.servTime}}" [disabled]="isDisabled"  class="def" id="serv"></div>
-        </ion-item>
-        
-        <ion-item >
-            <div><label class="fgh">Current Waiting Time :</label><input type="text" value="{{this.waitTime}}" [disabled]="isDisabled"  class="def" id="wait"></div>
-        </ion-item>
-	</ion-list> -->
-
 	<ion-list>
 	    <ion-item>
 	      <ion-icon ios="ios-clipboard" md="md-clipboard" color="danger"></ion-icon>
@@ -42,12 +28,12 @@
 	    </ion-item>
 	    <ion-item>
 	      <ion-icon ios="ios-clock" md="md-clock" color="danger"></ion-icon>
-	      <ion-label>Current Service Time: </ion-label>
+	      <ion-label>Predicted Service Time: </ion-label>
 	      <ion-note item-end>{{this.servTime}}</ion-note>
 	    </ion-item>
 	    <ion-item>
 	      <ion-icon ios="ios-time" md="md-time" color="danger"></ion-icon>
-	      <ion-label>Current Waiting Time: </ion-label>
+	      <ion-label>Predicted Waiting Time: </ion-label>
 	      <ion-note item-end>{{this.waitTime}}</ion-note>
 	    </ion-item>
 	</ion-list>

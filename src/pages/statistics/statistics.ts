@@ -1,8 +1,15 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
+/**
+ * Generated class for the StatisticsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
 @IonicPage()
 @Component({
@@ -21,18 +28,20 @@ export class StatisticsPage {
 	];
 	public lineChartLabels: Array<any> = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '00'];
 
-	public lineChartData1: Array<any> = [
-		{ data: [65, 59, 80, 81, 56, 55, 40], label: 'Avg. Waiting Time vs Time of the day' }
+	public lineChartData1:Array<any> = [
+	  {data: [40, 59, 80, 81, 56, 55, 40], label: 'Avg. Waiting Time vs Time of the day'}
 	];
 	public lineChartLabels1: Array<any> = ['00', '04', '08', '12', '16', '20', '00'];
 
-	public lineChartData2: Array<any> = [
-		{ data: [28, 48, 40, 19, 86, 27, 90], label: 'Total Avg. Service time over the month' }
+	public lineChartData2:Array<any> = [
+	  {data: [28, 48, 40, 19, 86, 27, 28], label: 'Total Avg. Service time over the month'}
 	];
+
 	public lineChartLabels2: Array<any> = ['00', '04', '08', '12', '16', '20', '00'];
 
-	public lineChartData3: Array<any> = [
-		{ data: [18, 48, 77, 9, 100, 27, 40], label: 'Total Avg. Waiting time over the month' }
+	public lineChartData3:Array<any> = [
+	  {data: [18, 48, 77, 9, 100, 27, 18], label: 'Total Avg. Waiting time over the month'}
+
 	];
 	public lineChartLabels3: Array<any> = ['00', '04', '08', '12', '16', '20', '00'];
 

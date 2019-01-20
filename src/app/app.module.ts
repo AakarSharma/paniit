@@ -9,6 +9,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';  // importing auth mo
 import { AngularFireDatabaseModule } from 'angularfire2/database'; // importing database module of angularfire2
 import { AngularFireStorageModule } from 'angularfire2/storage'; // importing storage module of angularfire2
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -43,7 +45,8 @@ var firebaseAuth = {
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     IonicModule.forRoot(MyApp),
-    ChartsModule
+    ChartsModule,
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -56,6 +59,7 @@ var firebaseAuth = {
   providers: [
     StatusBar,
     SplashScreen,
+    HTTP,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

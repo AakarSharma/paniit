@@ -12,6 +12,7 @@
     	<button ion-button icon-left class="navi" (click)="play()">
 		<ion-icon ios="ios-fastforward" md="md-fastforward"></ion-icon>LIVE
 		</button>
+
     </div>
   </ion-navbar>
 
@@ -20,11 +21,16 @@
 
 <ion-content padding>
 
-	<ion-list>
+	<ion-list no-lines>
+		<ion-item>
+			<button ion-button icon-only item-end clear (click)="presentActionSheet(document)">
+	          <ion-icon name="more"></ion-icon>
+	      </button>
+		</ion-item>
 	    <ion-item>
 	      <ion-icon ios="ios-clipboard" md="md-clipboard" color="danger"></ion-icon>
 	      <ion-label>Name: </ion-label>
-	      <ion-note item-end>The Interwebz</ion-note>
+	      <ion-note item-end>SBI</ion-note>
 	    </ion-item>
 	    <ion-item>
 	      <ion-icon ios="ios-clock" md="md-clock" color="danger"></ion-icon>

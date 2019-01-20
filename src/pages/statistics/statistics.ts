@@ -86,7 +86,21 @@ export class StatisticsPage {
 		const database = this.firedata.database;
 		this.galleryType = name;
 
+	}
 
+	ionViewWillEnter(){
+    const database = this.firedata.database;
+
+	database.ref('/').child(this.navParams.get("area")).child(this.navParams.get("location")).child(this.navParams.get("name")).child("predicted").once('value', snapshot => {
+      let averages = 0, averagew=0 , n = 0;
+      snapshot.forEach(child => {
+        averages += child.val()["average_service"];
+        averagew += child.val()["average_waiting"];
+        n += 1;
+      })
+      this.servTime = averages/n;
+      this.waitTime = averagew/n;
+    });
 	}
 
 	ionViewDidLoad() {

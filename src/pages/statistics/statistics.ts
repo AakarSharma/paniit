@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @IonicPage()
 @Component({
@@ -70,7 +72,18 @@ export class StatisticsPage {
 		console.log(e);
 	}
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, private firedata: AngularFireDatabase) {
+	predict() {
+		var url = 'http://localhost:8000/predict';
+		var httpOptions = {
+			headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+		};
+		var data = this.http.post(url, {}, httpOptions);
+		data.subscribe(data => {
+			console.log(data);
+		});
+	}
+
+	constructor(public http: HttpClient, public navCtrl: NavController, public navParams: NavParams, private firedata: AngularFireDatabase) {
 		const name = this.navParams.get("name");
 		const area = this.navParams.get("area");
 		const location = this.navParams.get("location");

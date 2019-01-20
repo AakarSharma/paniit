@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Item, ItemSliding } from 'ionic-an
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 
+
 import { ListPage} from '../list/list';
 
 @Component({
@@ -18,27 +19,27 @@ export class HomePage {
 		"Others"
 	];
 
-	cards = [
-    {
-      imageUrl: 'assets/imgs/card-saopaolo.png',
-      title: 'Railways',
-      // subtitle: '41 Listings'
-    },
-    {
-      imageUrl: 'assets/imgs/card-amsterdam.png',
-      title: 'Bank',
-      // subtitle: '64 Listings'
-    },
-    {
-      imageUrl: 'assets/imgs/card-sf.png',
-      title: 'Airport',
-      // subtitle: '72 Listings'
-    },
-    {
-      imageUrl: 'assets/imgs/card-madison.png',
-      title: 'Others',
-      // subtitle: '28 Listings'
-    }];
+	// cards = [
+ //    {
+ //      imageUrl: 'linear-gradient(-225deg, #005C97 0%, #005C97 48%, #005C97 100%)',
+ //      title: 'Railways',
+ //      // subtitle: '41 Listings'
+ //    },
+ //    {
+ //      imageUrl: 'linear-gradient(-225deg, #005C97 0%, #005C97 48%, #005C97 100%)',
+ //      title: 'Bank',
+ //      // subtitle: '64 Listings'
+ //    },
+ //    {
+ //      imageUrl: 'linear-gradient(-225deg, #005C97 0%, #005C97 48%, #005C97 100%)',
+ //      title: 'Airport',
+ //      // subtitle: '72 Listings'
+ //    },
+ //    {
+ //      imageUrl: 'linear-gradient(-225deg, #005C97 0%, #005C97 48%, #005C97 100%)',
+ //      title: 'Others',
+ //      // subtitle: '28 Listings'
+ //    }];
 
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, private fireauth: AngularFireAuth,

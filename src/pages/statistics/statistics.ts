@@ -18,6 +18,7 @@ export class StatisticsPage {
 	isDisabled = true;
 	servTime = 0;
 	boolTime = 0;
+	galleryType = 'daily';
 
 	public lineChartData:Array<any> = [
 	  {data: [65, 59, 80, 81, 56, 55, 40], label: 'Avg. Service Time vs Time of the day'}
@@ -80,6 +81,10 @@ export class StatisticsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StatisticsPage');
+  }
+
+  play() {
+
   }
 
 }

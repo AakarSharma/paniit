@@ -1,11 +1,13 @@
 page-home {
 
+	background-color: skyblue;
+
 	.title {
 		align-text: center;
 	}
 	.welcome-header{
 	    position: relative;
-	    background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%);
+	    background-image: linear-gradient(-225deg, #005C97 0%, #005C97 48%, #005C97 100%);
 	    width:100%;
 	    padding: 10px 0;
 	    margin-bottom: 5px;
@@ -39,12 +41,13 @@ page-home {
 	    }
 	    .personal-info h1 span {
 	      font-weight: 800;
-	      color: deeppink;
+	      color: white;
 	    }
 	}
 
     ion-item {
     	margin: 10px;
+    	border-radius: 7px;
     }
 
     .master {
@@ -60,14 +63,28 @@ page-home {
 	}
 
 	.item:hover {
-		background-color: orange;
+		background-color: #00FFFF;
 		color: white;
 	}
 
 	.chilli:hover{
 		background-color: white;
-		color: red;
+		color: skyblue;
 	}
+
+	ion-card {
+    position: relative;
+    text-align: center;
+    background-color: skyblue;
+  }
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
     
 }
 

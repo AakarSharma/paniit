@@ -6,8 +6,13 @@
 -->
 <ion-header>
 
-  <ion-navbar text-center color="danger">
-    <ion-title>Statistics</ion-title>
+  <ion-navbar color="danger">
+    <ion-title class="title">Statistics</ion-title>
+    <div>
+    	<button ion-button icon-left class="navi">
+		<ion-icon name='home'></ion-icon>LIVE
+		</button>
+    </div>
   </ion-navbar>
 
 </ion-header>
@@ -16,6 +21,10 @@
 <ion-content padding>
 
 	<ion-list no-lines class="descp">
+		<ion-item>
+            <div><label class="fgh">Name :</label><input type="text" value="{{this.name}}" [disabled]="isDisabled"  class="def" id="serv"></div>
+        </ion-item>
+
 		<ion-item>
             <div><label class="fgh">Current Service Time :</label><input type="text" value="{{this.servTime}}" [disabled]="isDisabled"  class="def" id="serv"></div>
         </ion-item>

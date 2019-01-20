@@ -18,6 +18,28 @@ export class HomePage {
 		"Others"
 	];
 
+	cards = [
+    {
+      imageUrl: 'assets/imgs/card-saopaolo.png',
+      title: 'Railways',
+      // subtitle: '41 Listings'
+    },
+    {
+      imageUrl: 'assets/imgs/card-amsterdam.png',
+      title: 'Bank',
+      // subtitle: '64 Listings'
+    },
+    {
+      imageUrl: 'assets/imgs/card-sf.png',
+      title: 'Airport',
+      // subtitle: '72 Listings'
+    },
+    {
+      imageUrl: 'assets/imgs/card-madison.png',
+      title: 'Others',
+      // subtitle: '28 Listings'
+    }];
+
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, private fireauth: AngularFireAuth,
 		private firedata: AngularFireDatabase) {
@@ -32,6 +54,14 @@ export class HomePage {
 
 	showCategory(but) {
 		this.navCtrl.push(ListPage,{'name':but});
+	}
+
+	cardTapped(card) {
+	    alert(card.title + ' was tapped.');
+	}
+
+	logout() {
+		
 	}
 
 }

@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
   public loginForm: any;
-  public backgroundImage = 'assets/imgs/background.jpg';
+  public backgroundImage = 'assets/imgs/background-2.jpg';
 
   constructor(
     public loadingCtrl: LoadingController,
@@ -58,12 +58,12 @@ export class LoginPage {
   }
 
   login() {
-    this.presentLoading('Thanks for signing in!');
+    // this.presentLoading('Thanks for signing in!');
     this.navCtrl.push(HomePage);
   }
 
   signup() {
-    this.presentLoading('Thanks for signing up!');
+    // this.presentLoading('Thanks for signing up!');
     this.navCtrl.push(HomePage);
   }
   resetPassword() {

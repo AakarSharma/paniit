@@ -18,7 +18,7 @@ export class StatisticsPage {
 	isDisabled = true;
 	servTime = 0;
 	boolTime = 0;
-	galleryType = 'daily';
+	galleryType = 'daily'
 
 	public lineChartData:Array<any> = [
 	  {data: [65, 59, 80, 81, 56, 55, 40], label: 'Avg. Service Time vs Time of the day'}
@@ -45,12 +45,12 @@ export class StatisticsPage {
 	};
 	public lineChartColors:Array<any> = [
 	  { // dark grey
-	    backgroundColor: 'rgba(77,83,96,0.2)',
-	    borderColor: 'rgba(77,83,96,1)',
-	    pointBackgroundColor: 'rgba(77,83,96,1)',
+	    backgroundColor: 'rgba(0,128,0,0.4)',
+	    borderColor: 'rgba(0,128,0,1)',
+	    pointBackgroundColor: 'rgba(0,128,0,1)',
 	    pointBorderColor: '#fff',
 	    pointHoverBackgroundColor: '#fff',
-	    pointHoverBorderColor: 'rgba(77,83,96,1)'
+	    pointHoverBorderColor: 'rgba(0,128,0,1)'
 	  }
 	];
 	public lineChartLegend:boolean = true;

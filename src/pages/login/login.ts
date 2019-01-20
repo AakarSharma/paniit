@@ -20,7 +20,7 @@ export class LoginPage {
     public navParams: NavParams,
   ) { }
 
-  // Slider methods
+  // Slider methods to slide through login and signup
   @ViewChild('slider') slider: Slides;
   @ViewChild('innerSlider') innerSlider: Slides;
 
@@ -57,15 +57,18 @@ export class LoginPage {
     loading.present();
   }
 
+  // login control goes hare
   login() {
     // this.presentLoading('Thanks for signing in!');
     this.navCtrl.push(HomePage);
   }
 
+  // register control goes here
   signup() {
     // this.presentLoading('Thanks for signing up!');
     this.navCtrl.push(HomePage);
   }
+  // Reset your Password 
   resetPassword() {
     this.presentLoading('An e-mail was sent with your new password.');
   }

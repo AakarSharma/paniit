@@ -11,7 +11,7 @@ import { ListPage} from '../list/list';
 	templateUrl: 'home.html'
 })
 export class HomePage {
-
+	// Different categories mentioned at home page
 	buts = [
 		"Railways",
 		"Bank",
@@ -53,14 +53,12 @@ export class HomePage {
 		});
 	}
 
+    // open the category page
 	showCategory(but) {
 		this.navCtrl.push(ListPage,{'name':but});
 	}
 
-	cardTapped(card) {
-	    alert(card.title + ' was tapped.');
-	}
-
+	// logout of the app
 	logout() {
 		
 	}

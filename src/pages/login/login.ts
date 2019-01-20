@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { AlertController, App, LoadingController, NavController, Slides, IonicPage, NavParams } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 import { HomePage } from '../home/home';
 
@@ -9,6 +10,9 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  @ViewChild('username') username;
+  @ViewChild('password') password;
+
   public loginForm: any;
   public backgroundImage = 'assets/imgs/background-2.jpg';
 
@@ -18,6 +22,7 @@ export class LoginPage {
     public app: App,
     public navCtrl: NavController,
     public navParams: NavParams,
+    private fire: AngularFireAuth
   ) { }
 
   // Slider methods
@@ -58,12 +63,16 @@ export class LoginPage {
   }
 
   login() {
-    // this.presentLoading('Thanks for signing in!');
-    this.navCtrl.push(HomePage);
+    this.fire.auth.signInWithEmailAndPassword(this.username.value + "@demo.com", this.password.value)
+      .then(data => {
+        this.navCtrl.setRoot(HomePage);
+      })
+      .catch(error => {
+        console.log('got an error ', error);
+      })
   }
 
   signup() {
-    // this.presentLoading('Thanks for signing up!');
     this.navCtrl.push(HomePage);
   }
   resetPassword() {

@@ -17,7 +17,7 @@ Follow these instructions to install the app and run it with the mock (in-memory
     https://github.com/AakarSharma/paniit.git
     ```
 
-1. Navigate to the `dreamhouse-mobile-ionic` directory :
+1. Navigate to the `paniit` directory :
     ```
     cd paniit
     ```
